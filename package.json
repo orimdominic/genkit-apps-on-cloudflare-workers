@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "genkit:dev": "genkit start -- tsx --watch src/dev.ts",
+    "genkit:dev": "genkit start -- tsx --env-file=.dev.vars --watch src/dev.ts",
     "deploy": "wrangler deploy --minify",
     "typecheck": "tsc --noEmit",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
