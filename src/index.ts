@@ -1,9 +1,5 @@
-import { Hono } from 'hono'
+import './genkit-runtime';
 
-const app = new Hono()
+import app from './app';
 
-app.post('/ping', (c) => {
-  return c.text('pong')
-})
-
-export default app
+export default app;

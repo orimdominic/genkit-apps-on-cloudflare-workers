@@ -3,13 +3,23 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
+    "genkit:dev": "genkit start -- tsx --watch src/dev.ts",
     "deploy": "wrangler deploy --minify",
+    "typecheck": "tsc --noEmit",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
+    "@cfworker/json-schema": "^4.1.6",
+    "@genkit-ai/compat-oai": "^1.44.0",
+    "@genkit-ai/google-genai": "^1.44.0",
+    "@hono/node-server": "^2.1.8",
+    "genkit": "^1.44.0",
     "hono": "^4.13.16"
   },
   "devDependencies": {
+    "genkit-cli": "^1.45.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
     "wrangler": "^4.110.0"
   }
 }
